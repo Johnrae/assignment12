@@ -3,7 +3,8 @@ body {
 
 header {
   width: 100%;
-  background-color: white; }
+  background-color: white;
+  border-bottom: 1px solid #E1E3DF; }
   header .topHead {
     border-bottom: 1px solid #E1E3DF;
     height: 100px; }
@@ -24,7 +25,23 @@ header {
     header .leftbar h2 {
       display: inline-block; }
     header .leftbar .searchbar {
-      display: inline-block; }
+      display: inline-block;
+      border-radius: 3px;
+      border: 1px solid #E1E3DF;
+      overflow: hidden;
+      height: 37px; }
+      header .leftbar .searchbar input {
+        padding: 10px;
+        border: none;
+        background-color: #F5F5F1; }
+        header .leftbar .searchbar input:focus {
+          outline-width: 0;
+          background-color: white; }
+      header .leftbar .searchbar button {
+        background-color: #2BA8C6;
+        color: white;
+        border: 1px solid #2798B3;
+        padding: 10px; }
   header .rightbar {
     display: inline-block;
     float: right;
@@ -52,15 +69,17 @@ navbar {
   width: 980px;
   height: 15px;
   margin: 0 auto;
-  margin-bottom: 20px;
   display: block;
   padding: 15px 0; }
   navbar a {
     text-decoration: none;
     color: #666;
     padding: 0px 10px;
+    padding-bottom: 10px;
     font-size: 13px;
     float: left; }
+    navbar a:hover {
+      border-bottom: 5px solid #F76400; }
 
 .wrapper {
   margin: 0 auto;
@@ -131,6 +150,12 @@ navbar {
   margin-bottom: 10px;
   margin-top: 20px;
   font-size: 13px; }
+  .rlstein a {
+    text-decoration: none;
+    color: #0092B7; }
+
+#cat:hover {
+  text-decoration: underline; }
 
 .imgcontainer {
   border-radius: 3px;
@@ -185,3 +210,6 @@ navbar {
     text-decoration: none; }
     .imgcontainer a:hover {
       text-decoration: underline; }
+
+.strong {
+  font-weight: bold; }

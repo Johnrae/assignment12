@@ -12,13 +12,13 @@ $bordercolor: #E1E3DF;
   border-bottom-color: #CBCCC9;
 }
 
-
 body{
   background-color: #F5F5F1;
 }
 header{
   width: 100%;
   background-color: white;
+  border-bottom: 1px solid $bordercolor;
 
   
   .topHead{
@@ -47,6 +47,27 @@ header{
       }
       .searchbar{
         display: inline-block;
+        border-radius: 3px;
+        border: 1px solid $bordercolor;
+        overflow: hidden;
+        height: 37px;
+        input {
+          padding: 10px;
+          border: none;
+          background-color: #F5F5F1;
+         
+          &:focus{
+            outline-width: 0;
+            background-color: white;
+          }
+        }
+        button {
+          background-color: $btnblue;
+          color: white;
+          border: 1px solid #2798B3;
+          padding: 10px;
+
+        }
       }
     }
 
@@ -87,15 +108,18 @@ navbar{
   width: 980px;
   height: 15px;
   margin: 0 auto;
-  margin-bottom: 20px;
   display: block;
   padding: 15px 0;
   a{
     text-decoration: none;
     color: $fontgrey;
     padding: 0px 10px;
+    padding-bottom: 10px;
     font-size: 13px;
     float: left;
+    &:hover {
+      border-bottom: 5px solid $orange;
+    }
   }
 }
 
@@ -186,6 +210,13 @@ navbar{
   margin-bottom: 10px;
   margin-top: 20px;
   font-size: 13px;
+  a {
+    text-decoration: none;
+    color: $fontblue;
+  }
+}
+#cat:hover {
+  text-decoration: underline;
 }
 
 .imgcontainer{
@@ -214,9 +245,6 @@ navbar{
       @include borderkit;
       height: 30px;
       width: 30px;
-      &:hover {
-        
-      }
       img{
         width: 110%;
       }
@@ -251,4 +279,8 @@ navbar{
       text-decoration: underline;
     }
   }
+}
+
+.strong {
+  font-weight: bold;
 }
