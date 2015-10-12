@@ -1,15 +1,199 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>SAMPLE PROJECT</title>
-  <link rel="stylesheet" href="css/vendor.css">
+  <title>Etsy</title>
+  <link rel="stylesheet" href="bower_components/normalize.css/normalize.css">
   <link rel="stylesheet" href="css/main.css">
 </head>
+
 <body>
 
-  <h1>Hello World</h1>
+<div class='container'>
 
-  <script src="js/vendor.js"></script>
+  <header>
+
+    <div class='topHead'>
+      <div class='headContainer'>
+        <div class='leftbar'>
+          <h2>Etsy</h2>
+          <div class='searchbar'>
+            <input type="search"></input>
+            <button>Search</button> 
+          </div>
+        </div>
+        <ul class='rightbar'>
+          <li>
+            <a href="#">Sell on Etsy</a>
+          </li>
+          <li>
+            <a href="#">Register</a>
+          </li>
+          <li>
+            <button><a href="#">Sign in</a></button>
+          </li>
+          <li>
+            <a href="#" class='cart'>Cart</a>  <!-- make sure to add before with sprite here -->
+          </li>
+        </ul>
+      </div>
+    </div>  
+
+    <navbar>
+      <a href="#">Clothing & Accessories</a>
+      <a href="#">Jewelry</a>
+      <a href="#">Craft Supplies & Tools</a>
+      <a href="#">Weddings</a>  
+      <a href="#">Entertainment</a> 
+      <a href="#">Home & Living</a>
+      <a href="#">Kids & Baby</a>
+      <a href="#">Vintage</a>
+    </navbar>
+
+  </header>
+
+
+  <div class='wrapper'>
+
+    <div class='sidebar'>
+      <h5>Show results for:</h5>
+      <div id='sidebar1'>  <!-- div for first sidebar section -->
+        <ul>
+          <li class='strong'>All Categories</li>
+            <li><a href="#">Art & Collectibles</a></li>
+            <li><a href="#">Clothing</a></li>
+            <li><a href="#">Jewelry</a></li>
+            <li><a href="#">Accessories</a></li>
+            <li><a href="#">Bath & Beauty</a></li>
+            <li><a href="#">Home & Living</a></li>
+            <li><a href="#">Craft Supplies & Tools</a></li>
+            <li><a href="#">Toys & Games</a></li>
+            <li><a href="#">Paper & Party Supplies</a></li>
+            <li><a href="#">Bags & Purses</a></li>
+            <li><a href="#">Books, Movies & Music</a></li>
+            <li><a href="#">Electronics & Accessories</a></li>
+            <li><a href="#">Shoes</a></li>
+            <li><a href="#">Pet Supplies</a></li>
+            <li><a href="#">Weddings</a></li>
+        </ul>
+      </div> <!--  end sidebar 1 -->
+
+      <h5>Refine your search</h5>
+      <div id='sidebar2'>
+        <div class='pad'>
+          <div class='sideunit'>
+            <p>Item type</p>
+            <label><input type="radio" id='rad1'><a href="#">All Items</a></label>
+            <br>
+            <label><input type="radio" id='rad2'><a href="#">Handmade</a></label>
+            <br>
+            <label><input type="radio" id='rad3'><a href="#">Vintage</a></label>
+            <br>
+          </div>
+
+          <div class='sideunit'>
+            <p class="strong">Price</p>
+            <div class="priceBox">
+              <span>$</span>
+              <input type="text" placeholder='low'>
+            </div>
+            <span>to</span>
+            <div class="priceBox">
+              <span>$</span>
+              <input type="text" placeholder='high'>
+            </div>
+            <button>></button>
+          </div> <!-- end div for price search -->
+         
+          <div class='sideunit'>
+            <p class='strong'>Filter by Color</p>
+            <button></button>
+            <button></button>
+            <button></button>
+            <button></button>
+            <button></button>
+            <button></button>
+            <button></button>
+            <button></button>
+          </div> <!-- color buttons -->
+
+          <div class="sideunit">
+            <p>Ordering Options</p>
+            <div>
+              <input type='checkbox'>
+              <a href="#">Accepts Etsy Gift Cards</a>
+            </div> 
+            <div>
+              <input type='checkbox'>
+              <a href="#">Customizable</a>
+            </div> 
+          </div>
+
+          <div class='sideunit'>
+            <p class='strong'>Shop Location</p>
+            <label><input type="radio"><a href="#">Anywhere</a></label><br>
+            <label><input type="radio"><a href="#">United States</a></label><br>
+            <a href="#">Choose a custom location</a>
+          </div>
+
+          <div>
+            <p class='strong'>Ship To</p>
+            <select>
+              <option>United States</option>
+              <option>America</option>
+              <option>Fuck Yeah</option>
+              <option>America</option>
+              <option>Fuck Yeah</option>
+              <option>America</option>
+              <option>Fuck Yeah</option>
+              <option>America</option>
+              <option>Fuck Yeah</option>
+              <option>America</option>
+              <option>Fuck Yeah</option>
+            </select>
+          </div>
+        </div>
+      </div> <!-- end sidebar 2 -->
+
+    </div> <!-- end sidebar column -->
+
+    <div class="content" >
+      <div class="rlstein">
+        <div class="lefty">
+          <a href="#">All Categories</a>
+          <span class="strong">> "slime"</span>
+          <span>(2,042 results)</span>
+        </div>
+        <div class="righty">
+          <span>Sort by: </span>
+        </div>
+      </div>
+      <script type="text/template" id='contentSpit'>
+        <div class="imgcontainer">
+          <img src="<%= Images[0].url_170x135 %>">
+          <div class="hoverCont">
+            <button class="hoverBtn"><img src="images/heart.png"></button>
+            <button class="hoverBtn"><img src="images/hamburger.png"></button>
+          </div>
+          <div class="textContainer">
+            <p class='title'>
+              <%= title %>
+            </p>
+            <a href="#" class="name"><%= Shop.shop_name %></a>
+            <p class='price'>
+              $<%= price %>
+            </p>
+          </div>
+        </div>
+      </script>
+
+    </div>
+  </div> <!-- end wrapper -->
+
+</div> <!-- end container -->  
+
+  <script src="bower_components/jquery/dist/jquery.min.js"></script>
+  <script src="bower_components/underscore/underscore-min.js"></script>
+  <script src="js/etsyitems.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>
