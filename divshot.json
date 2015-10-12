@@ -1,0 +1,6 @@
+{
+  "name": "johnrae-tiy-livedata-assignment12",
+  "root": "./",
+  "clean_urls": true,
+  "error_page": "error.html"
+}
