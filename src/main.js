@@ -19,7 +19,6 @@
       $('.content').append(itemHTML);
       });
       
-    console.log(etsy);
   });
 
 

@@ -18,7 +18,5 @@
       var itemHTML = funStuff(item);
       $('.content').append(itemHTML);
     });
-
-    console.log(etsy);
   });
 })();
